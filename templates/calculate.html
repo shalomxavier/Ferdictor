@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Available Nutrients</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url("/static/coconut.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 350px; /* Adjust margin-top as needed */
+            transform: translateY(-50%);
+            width: 500px; /* Adjust width as needed */
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            margin-top: 0; /* Adjust margin-top as needed */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="button"] {
+            background-color: #f44336;
+            color: white;
+        }
+        input[type="button"]:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Enter Available Nutrients</h1>
+        <form action="/calculate" method="post">
+            <label for="available_n">Available Nitrogen (%):</label>
+            <input type="number" name="available_n" id="available_n" step="any" required>
+            <br>
+            <label for="available_p">Available Phosphorus (kg/ha):</label>
+            <input type="number" name="available_p" id="available_p" step="any" required>
+            <br>
+            <label for="available_k">Available Potassium (kg/ha):</label>
+            <input type="number" name="available_k" id="available_k" step="any" required>
+            <input type="button" value="Read">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

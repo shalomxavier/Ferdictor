@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url("/static/coconut.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .result-container {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 50%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white; /* Ensure columns stay white */
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            background-color: white; /* Keep cells white */
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .back-button, .schedule-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .back-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        .schedule-button {
+            background-color: #FF4C4C;
+            color: white;
+            margin-left: 10px;
+        }
+        .schedule-button:hover {
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Fertilizers Needed</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fertilizer</th>
+                    <th>Quantity (kg/palm/year)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Urea</td>
+                    <td>{{ urea|round(3) }}</td>
+                </tr>
+                <tr>
+                    <td>Single Superphosphate</td>
+                    <td>{{ ssp|round(3) }}</td>
+                </tr>
+                <tr>
+                    <td>Muriate of Potash</td>
+                    <td>{{ mop|round(3) }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-container">
+            <button class="back-button" onclick="window.history.back()">Back</button>
+            <button class="schedule-button" onclick="getSchedule()">Get Schedule</button>
+        </div>
+    </div>
+    <script>
+        function getSchedule() {
+            window.location.href = "/schedule"; // Redirect to the schedule page
+        }
+    </script>
+</body>
+</html>
