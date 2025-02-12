@@ -6,6 +6,12 @@
     <title>Select Crop and Soil Type</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-image: url("/static/home.jpg");
             background-size: cover;
@@ -16,56 +22,66 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            padding: 0;
+            padding: 10px;
         }
-.form-container {
+
+        .form-container {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.0);
-            margin-top: 250px; /* Adjust margin-top as needed */
-            transform: translateY(-50%);
-            width: 500px; /* Adjust width as needed */
-
-        form {
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-top: 5px;
-
-
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
         }
+
         h1 {
             color: #333;
-            margin-bottom: 20px;
+            font-size: 22px;
+            margin-bottom: 15px;
         }
+
         label {
             display: block;
-            margin-bottom: 10px;
-            color: #555;
-        }
-        select, input[type="submit"] {
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
+            margin-bottom: 8px;
             font-size: 16px;
+            color: #555;
+            text-align: left;
         }
+
+        select, input[type="submit"] {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 16px;
+            outline: none;
+        }
+
         input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             border: none;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
+
         input[type="submit"]:hover {
             background-color: #45a049;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            select, input[type="submit"] {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -79,16 +95,15 @@
                 <option value="banana">Banana</option>
                 <option value="rice">Rice</option>
                 <option value="pepper">Pepper</option>
-                <option value="Pumpkin">Pumpkin</option>
-                <!-- Add other crop options here -->
+                <option value="pumpkin">Pumpkin</option>
             </select>
-            <br>
+
             <label for="soil_type">Select Soil Type:</label>
             <select name="soil_type" id="soil_type">
                 <option value="sandy">Sandy</option>
                 <option value="loamy/clayey">Loamy/Clayey</option>
             </select>
-            <br>
+
             <input type="submit" value="Next">
         </form>
     </div>

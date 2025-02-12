@@ -5,77 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            background-image: url("/static/coconut.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            background: url("/static/coconut.jpg") center/cover no-repeat;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            padding: 0;
+            padding: 10px;
         }
+
         .result-container {
-            background-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             text-align: center;
-            width: 50%;
-            max-width: 600px;
+            width: 100%;
+            max-width: 400px;
         }
+
         h1 {
             color: #333;
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 15px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
-            background-color: white; /* Ensure columns stay white */
+            margin-bottom: 15px;
+            background: white;
         }
+
         th, td {
-            padding: 12px 15px;
+            padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
-            background-color: white; /* Keep cells white */
+            font-size: 14px;
         }
+
         th {
-            background-color: #4CAF50;
+            background: #4CAF50;
             color: white;
+            text-align: center;
         }
+
         tr:hover {
-            background-color: #f1f1f1;
+            background: #f9f9f9;
         }
+
         .button-container {
-            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
         }
-        .back-button, .schedule-button {
-            padding: 10px 20px;
+
+        button {
+            flex: 1;
+            padding: 12px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s ease;
         }
+
         .back-button {
-            background-color: #4CAF50;
+            background: #4CAF50;
             color: white;
         }
+
         .back-button:hover {
-            background-color: #45a049;
+            background: #45a049;
         }
+
         .schedule-button {
-            background-color: #FF4C4C;
+            background: #FF4C4C;
             color: white;
-            margin-left: 10px;
         }
+
         .schedule-button:hover {
-            background-color: #FF0000;
+            background: #FF0000;
+        }
+
+        @media (max-width: 480px) {
+            .result-container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+
+            th, td {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -111,7 +149,7 @@
     </div>
     <script>
         function getSchedule() {
-            window.location.href = "/schedule"; // Redirect to the schedule page
+            window.location.href = "/schedule";
         }
     </script>
 </body>
