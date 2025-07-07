@@ -27,29 +27,13 @@ Machine Learning Models: Pretrained .pkl models using joblib
 
 Hosting: Run locally with Flask’s development server
 
-📁 Project Structure
-php
-Copy
-Edit
-fertilizer-app/
-│
-├── app.py                     # Main Flask application
-├── ssp_model.pkl              # Trained model for SSP prediction
-├── mop_model.pkl              # Trained model for MOP prediction
-├── urea_model.pkl             # Trained model for Urea prediction
-├── templates/
-│   ├── index.html             # Crop & soil type selection
-│   ├── calculate.html         # Form to enter available N, P, K
-│   ├── result.html            # Shows predicted fertilizer values
-│   └── schedule.html          # Displays fertilizer schedule
-└── static/                    # (Optional) CSS, JS, and image files
 💻 How to Run Locally
 Clone the repository
 
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/fertilizer-app.git
+git clone https://github.com/shalomxavier/ferdictor.git
 cd fertilizer-app
 Install dependencies
 
@@ -99,4 +83,3 @@ Models are trained externally and are expected to be accurate for specific soil/
 
 📜 License
 MIT License
-
