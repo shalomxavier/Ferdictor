@@ -20,11 +20,10 @@ A web-based Flask application that predicts the required quantity of SSP (Single
 
 ## 📸 Screenshots
 
-![Screenshot – Index Page](https://github.com/user-attachments/assets/placeholder1)
-![Screenshot – Result Page](https://github.com/user-attachments/assets/placeholder2)
-![Screenshot – Schedule Page](https://github.com/user-attachments/assets/placeholder3)
-
-> _Replace the placeholder links above with real uploaded screenshot URLs from your GitHub issues or discussions._
+![Screenshot 2025-07-08 151919](https://github.com/user-attachments/assets/d2788445-2cef-4802-967c-050976b52ad3)
+![Screenshot 2025-07-08 160258](https://github.com/user-attachments/assets/2a43c060-4c34-4fbe-aa88-861cda0a37d0)
+![Screenshot 2025-07-08 160000](https://github.com/user-attachments/assets/b77a60f5-8305-4ef4-bdbe-4ba2abf98ddd)
+![Screenshot 2025-07-08 160037](https://github.com/user-attachments/assets/6ee4bede-c67c-4b59-83d6-e7ca18a979e6)
 
 ## 🚀 Getting Started
 
