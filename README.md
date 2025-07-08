@@ -1,73 +1,34 @@
-🌾 Fertilizer Recommendation System for Coconut Cultivation
+# Ferdictor – Fertilizer Recommendation System for Coconut Cultivation
 
-A web-based application built with Flask that predicts the recommended quantity of SSP (Single Super Phosphate), MOP (Muriate of Potash), and Urea for coconut cultivation, based on the nutrient availability in soil.
+A web-based Flask application that predicts the required quantity of SSP (Single Super Phosphate), MOP (Muriate of Potash), and Urea for coconut cultivation based on available soil nutrient values using trained machine learning models.
 
-🚀 Features
-Predicts SSP, MOP, and Urea quantities using machine learning models (.pkl files).
+## 🔧 Features
 
-Takes available soil N, P, and K values as input.
+- Predicts optimal fertilizer quantities based on N, P, K availability  
+- Uses trained ML models stored as `.pkl` files  
+- Applies expert rules to avoid over-fertilization  
+- Flask-powered multi-page interface  
+- Session-based data handling  
 
-Applies domain-specific rules:
+## 🛠️ Technologies Used
 
-No Urea if available N > 0.25
+- Python  
+- Flask  
+- NumPy  
+- Joblib  
+- HTML/CSS (Jinja2 templates)  
 
-No SSP if available P > 34.5
+## 📸 Screenshots
 
-No MOP if available K > 395
+![Screenshot – Index Page](https://github.com/user-attachments/assets/placeholder1)
+![Screenshot – Result Page](https://github.com/user-attachments/assets/placeholder2)
+![Screenshot – Schedule Page](https://github.com/user-attachments/assets/placeholder3)
 
-Multi-page interface using Flask routing (index, calculate, result, and schedule).
+> _Replace the placeholder links above with real uploaded screenshot URLs from your GitHub issues or discussions._
 
-Maintains state using Flask session.
+## 🚀 Getting Started
 
-🧠 Tech Stack
-Frontend: HTML (via Jinja2 templates)
-
-Backend: Python with Flask
-
-Machine Learning Models: Pretrained .pkl models using joblib
-
-Hosting: Run locally with Flask’s development server
-
-💻 How to Run Locally
-Clone the repository
-
-clone https://github.com/shalomxavier/ferdictor.git
-
-Install dependencies
-
-Make sure you have Python 3 installed
-
-Add model files
-
-Place the following trained model files in the root directory:
-
-ssp_model.pkl
-
-mop_model.pkl
-
-urea_model.pkl
-
-Run the Flask server
-
-Navigate to http://127.0.0.1:5000 in your browser.
-
-🔍 Example Use Case
-Select Coconut as the crop and Loamy/Clayey as the soil type.
-
-Enter the available values of:
-
-Phosphorus (P)
-
-Potassium (K)
-
-Nitrogen (N)
-
-Get fertilizer recommendations tailored for your soil!
-
-📌 Note
-This is a prototype system built for research and learning purposes.
-
-Models are trained externally and are expected to be accurate for specific soil/crop conditions.
-
-📜 License
-MIT License
+```bash
+git clone https://github.com/shalomxavier/Ferdictor.git
+cd Ferdictor
+pip install flask joblib numpy
