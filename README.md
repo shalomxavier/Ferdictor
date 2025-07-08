@@ -1,5 +1,6 @@
 🌾 Fertilizer Recommendation System for Coconut Cultivation
-A simple web-based application built with Flask that predicts the recommended quantity of SSP (Single Super Phosphate), MOP (Muriate of Potash), and Urea for coconut cultivation, based on the nutrient availability in soil.
+
+A web-based application built with Flask that predicts the recommended quantity of SSP (Single Super Phosphate), MOP (Muriate of Potash), and Urea for coconut cultivation, based on the nutrient availability in soil.
 
 🚀 Features
 Predicts SSP, MOP, and Urea quantities using machine learning models (.pkl files).
@@ -30,19 +31,12 @@ Hosting: Run locally with Flask’s development server
 💻 How to Run Locally
 Clone the repository
 
-bash
-Copy
-Edit
-git clone https://github.com/shalomxavier/ferdictor.git
-cd fertilizer-app
+clone https://github.com/shalomxavier/ferdictor.git
+
 Install dependencies
 
-Make sure you have Python 3 installed. Then:
+Make sure you have Python 3 installed
 
-bash
-Copy
-Edit
-pip install flask joblib numpy
 Add model files
 
 Place the following trained model files in the root directory:
@@ -54,12 +48,6 @@ mop_model.pkl
 urea_model.pkl
 
 Run the Flask server
-
-bash
-Copy
-Edit
-python app.py
-Open in browser
 
 Navigate to http://127.0.0.1:5000 in your browser.
 
